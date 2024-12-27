@@ -2,6 +2,7 @@ package zookeeper
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/andreparelho/temperature-challenge/channel"
 )
@@ -19,6 +20,7 @@ func (zookeeper *NewZookeeperOne) Consumer() {
 				zookeeper.Print()
 			}
 		}
+		time.Sleep(2 * time.Second)
 	}
 }
 
