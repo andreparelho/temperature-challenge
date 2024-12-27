@@ -11,7 +11,6 @@ import (
 const MAX_ITERATOR int = 500
 
 func main() {
-	var numbers []int
 	var newChannel = make(chan int)
 
 	var channel = channel.TemperatureChannel{
@@ -23,12 +22,12 @@ func main() {
 	}
 
 	var zookeeperOne = zookeeper.NewZookeeperOne{
-		Numbers:            numbers,
+		Numbers:            []int{},
 		TemperatureChannel: channel,
 	}
 
 	var zookeeperTwo = zookeeper.NewZookeeperTwo{
-		Numbers:            numbers,
+		Numbers:            []int{},
 		TemperatureChannel: channel,
 	}
 
