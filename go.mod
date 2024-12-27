@@ -1,3 +1,3 @@
-module github.com/andreparelho/temperature-manager
+module github.com/andreparelho/temperature-challenge
 
 go 1.23.2
