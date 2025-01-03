@@ -31,10 +31,10 @@ func main() {
 		TemperatureChannel: channel,
 	}
 
-	for i := 0; i < MAX_ITERATOR; i++ {
-		var randomNumber = rand.IntN(100)
+	for range MAX_ITERATOR {
+		var temperature = rand.IntN(100)
 
-		go observer.Observer(randomNumber)
+		go observer.Observer(temperature)
 		go zookeeper.IZookeeper.Consumer(&zookeeperOne)
 		go zookeeper.IZookeeper.Consumer(&zookeeperTwo)
 	}
