@@ -8,6 +8,6 @@ type NewObserver struct {
 	TemperatureChannel channel.TemperatureChannel
 }
 
-func (observer *NewObserver) Observer(number int) {
-	observer.TemperatureChannel.Channel <- number
+func (observer *NewObserver) Observer(temperature int) {
+	observer.TemperatureChannel.Channel <- temperature
 }
